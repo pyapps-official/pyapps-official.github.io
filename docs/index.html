@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation - Vortex</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f8fafc;
+      color: #334155;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 1.5rem;
+    }
+
+    .docs-card {
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 2.5rem;
+      width: 100%;
+      max-width: 650px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      position: relative;
+    }
+
+    .btn-back {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      text-decoration: none;
+      font-size: 0.85rem;
+      color: #64748b;
+      font-weight: 600;
+    }
+
+    .btn-back:hover {
+      color: #0f172a;
+    }
+
+    .docs-card h1 {
+      font-size: 1.5rem;
+      color: #0f172a;
+      margin-bottom: 0.5rem;
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .docs-card p {
+      color: #64748b;
+      font-size: 0.9rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .doc-section {
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid #f1f5f9;
+      padding-bottom: 1rem;
+    }
+
+    .doc-section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .doc-section h3 {
+      font-size: 1rem;
+      color: #0f172a;
+      margin-bottom: 0.4rem;
+    }
+
+    .doc-section p {
+      font-size: 0.85rem;
+      color: #64748b;
+      text-align: left;
+      margin-bottom: 0;
+      line-height: 1.4;
+    }
+
+    .docs-footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: #94a3b8;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="docs-card">
+    <a href="../" class="btn-back">← Accueil</a>
+    <h1>Documentation Technique</h1>
+    <p>Guide d'architecture et de référence pour l'écosystème Vortex.</p>
+
+    <div class="doc-section">
+      <h3>1. Architecture du projet</h3>
+      <p>Vortex repose sur une structure modulaire sans JavaScript superflu. Chaque composant fonctionnel (authentification, documentation, pages) est isolé dans son propre dossier pour garantir une maintenabilité accrue.</p>
+    </div>
+
+    <div class="doc-section">
+      <h3>2. Gestion des chemins relatifs</h3>
+      <p>Les liens de navigation inter-dossiers utilisent systématiquement la syntaxe standard (ex: <code>../</code> pour remonter à la racine du projet) afin de garantir une compatibilité totale en local via Live Server ou sur un serveur distant.</p>
+    </div>
+
+    <div class="doc-section">
+      <h3>3. Charte graphique & Design</h3>
+      <p>L'interface privilégie le minimalisme et la lisibilité, s'inspirant des standards des tableaux de bord modernes avec des conteneurs épurés et des transitions fluides.</p>
+    </div>
+
+    <div class="docs-footer">
+      Vortex Documentation &copy; 2026
+    </div>
+  </div>
+
+</body>
+</html>
