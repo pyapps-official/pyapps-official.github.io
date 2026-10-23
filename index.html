@@ -126,6 +126,30 @@
 
 </head>
 <body>
+  <!-- Bannière de consentement RGPD -->
+<div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; width: 100%; background-color: #0f172a; color: #ffffff; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; z-index: 9999; font-family: Arial, sans-serif; box-shadow: 0 -2px 10px rgba(0,0,0,0.1);">
+  <p style="margin: 0; font-size: 0.9rem; max-width: 800px;">
+    Nous utilisons des cookies pour analyser le trafic et améliorer votre expérience. En continuant, vous acceptez leur utilisation.
+  </p>
+  <div style="display: flex; gap: 1rem;">
+    <button id="accept-cookies" style="background-color: #2563eb; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; font-weight: bold;">Accepter</button>
+  </div>
+</div>
+
+<script>
+  // Vérifie si l'utilisateur a déjà cliqué sur Accepter
+  if (localStorage.getItem('cookiesAccepted') === 'true') {
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+
+  // Cache la bannière et enregistre le choix au clic
+  document.getElementById('accept-cookies').addEventListener('click', function() {
+    localStorage.setItem('cookiesAccepted', 'true');
+    document.getElementById('cookie-banner').style.display = 'none';
+  });
+</script>
+
+
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TL2G5TS2"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
